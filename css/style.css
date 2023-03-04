@@ -13,21 +13,12 @@ a {
   text-decoration: none;
 }
 
-
-/*
-【要素の重ね合わせ（親要素）】
-positionで要素を重ね合わせると高さがなくなるので、
-高さを残したい場合は親要素で「height」を指定。
-*/
 .content {
   max-width: 1000px;
   margin: 100px auto;
   position: relative;
 }
-/*
-【要素の重ね合わせ（子要素）】
-「position: absolute;」と「left」で左に配置。
-*/
+
 .text {
   max-width: 1000px;
   background-color: #fff;
@@ -39,9 +30,7 @@ positionで要素を重ね合わせると高さがなくなるので、
   line-height: 1.8;
   margin-bottom: 35px;
 }
-/*
-「display: inline-block;」で下線をテキスト幅に合わせる。
-*/
+
 .text .title {
   border-bottom: solid 1px #35383a;
   display: inline-block;
@@ -52,12 +41,7 @@ positionで要素を重ね合わせると高さがなくなるので、
 .text .large {
   font-size: 1.875rem;
 }
-/*
-「display: inline-block;」でボタンをテキスト幅に合わせてから
-paddingでサイズを調整。
-「transition」で、ホバーをふわっとさせる。
-（※transitionの詳細については調べてみてくださいね。）
-*/
+
 .text .btn {
   display: inline-block;
   border: solid 1px #35383a;
@@ -75,17 +59,7 @@ paddingでサイズを調整。
   padding-bottom: 3px;
 }
 
-
-
-/*-------------------------------------------
-SP
--------------------------------------------*/
 @media screen and (max-width: 1000px) {
-  /*
-  スマホ時はテキストエリアと画像を縦に並べるので、
-  「position: static;」で位置の固定を解除する。
-  「height: auto;」で高さの固定も解除する。
-  */
   .content {
     height: auto;
     position: static;
